@@ -1,0 +1,1 @@
+2022-03-11 01:08:46.245130 (MainThread): write_gpickle is deprecated and will be removed in 3.0.Use ``pickle.dump(G, path, protocol)``
