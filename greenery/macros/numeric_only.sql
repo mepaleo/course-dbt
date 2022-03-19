@@ -2,6 +2,6 @@
 
     select *
     from {{ model }}
-    where {{ column_name }} NOT LIKE '%[^0-9]%'
+    where {{ column_name }}
     
 {% endtest %}

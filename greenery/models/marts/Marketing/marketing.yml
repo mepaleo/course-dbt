@@ -1,0 +1,23 @@
+version: 2
+
+marketing:
+    tables:
+      - name: user_orer_facts
+        description: Include details on each user including order details.
+        columns:
+        - name: full_name
+        - name: user_id
+          tests:
+          - not_null
+        - name: repeat_customer
+        - name: addresss
+        - name: zipcode
+        - name: state
+        - name: email
+        - name: order_total
+        - name: max_delivery_delay
+        - name: average_product_quantity
+        - name: count_promos_used
+        
+        
+ 
