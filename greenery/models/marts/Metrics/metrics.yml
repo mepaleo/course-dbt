@@ -1,0 +1,26 @@
+version: 2
+
+marketing:
+    tables:      
+      - name: mtc_conversion
+        description: Calculates conversion rate from page views to orders made.
+        columns:
+        - name: conversion_rate
+
+      - name: mtc_product_conversion
+        description: Calculates conversion rate from page views to orders made for each product.
+        columns:
+        - name: product_name
+        - name: product_id
+        - name: product_checkout_count
+          description: Counts the unique checkout events for each product.
+        - name: product_page_views_count
+          description: Counts the unique page view events for each product.
+        - name: product_added_to_cart_count
+          description: Counts the unique add-to-cart events for each product.
+        - name: product_package_shipped_count
+          description: Counts the unique package shipped events for each product.
+        - name: product_purchased
+          description: Counts the unique orders in which product was included.
+        - name: product_conversion
+          description: Calculates the conversion rates from page views to checkout event for each product.

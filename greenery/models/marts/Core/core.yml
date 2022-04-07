@@ -56,22 +56,22 @@ models:
             #- positive_values
 
     
-      - name: fct_events
-        description: Includes information on the events of each online order.
-        columns:
-        - name: event_id
-          description: "The primary key for this table"
-          tests:
-            - not_null
-            - unique
-        - name: session_id
-        - name: user_id
-            - not_null
-        - name: page_url
-        - name: created_at_utc
-        - name: event_type
-        - name: order_id
-        - name: product_id
+      # - name: fct_events
+      #   description: Includes information on the events of each online order.
+      #   columns:
+      #   - name: event_id
+      #     description: "The primary key for this table"
+      #     tests:
+      #       - not_null
+      #       - unique
+      #   - name: session_id
+      #   - name: user_id
+      #       - not_null
+      #   - name: page_url
+      #   - name: created_at_utc
+      #   - name: event_type
+      #   - name: order_id
+      #   - name: product_id
 
       - name: fct_orders
         description: Includes information on each order like user, order and shipping details.

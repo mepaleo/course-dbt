@@ -1,0 +1,14 @@
+version: 2
+
+exposures:  
+  - name: Product Funnel Dashboard
+    description: >
+      Models that are critical to our product funnel dashboard
+    type: dashboard
+    maturity: high
+    owner:
+      name: Meaghan Paleologos
+      email: meaghan@greenery.com
+    depends_on:
+      - ref('mtc_product_funnel')
+      - ref('mtc_product_funnel_conversion')

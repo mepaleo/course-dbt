@@ -2,7 +2,7 @@ version: 2
 
 marketing:
     tables:
-      - name: user_orer_facts
+      - name: user_order_facts
         description: Include details on each user including order details.
         columns:
         - name: full_name
@@ -19,5 +19,29 @@ marketing:
         - name: average_product_quantity
         - name: count_promos_used
         
-        
- 
+      - name: fct_user_sessions
+        description: Include details on the sessions by product including customer name and session lenght.
+        columns:
+        - name: session_id
+        - name: user_id
+          tests:
+          - not_null
+        - name: full_name
+        - name: page_view
+          description: Flags as 1 if the session event was page_view.
+        - name: add_to_cart
+          description: Flags as 1 if the session event was add_to_cart.
+        - name: check_out
+          description: Flags as 1 if the session event was check_out.
+        - name: package_shipped
+          description: Flags as 1 if the session event was package_shipped.
+        - name: product_id
+          description: Product associated wit this to this session/event.
+        - name: order_id
+          description: Order associated wit this to this session/event.
+        - name: session_start_time
+          description: First create_at timestamp for this session, or the timestamp when session started.
+        - name: session_end_time
+          description: Last create_at timestamp for this session, or the timestamp when session started.
+        - name: session_length
+          description: Length, in minutes, of the session.
